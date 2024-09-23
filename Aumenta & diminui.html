@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM operadores</title>
+</head>
+<body>
+    <p id="som"> Soma </p>
+    <p id="sub"> Subtração</p>
+    <p id="mult"> Multiplicação</p>
+    <p id="div"> Divisão</p>
+    <p id="res"> Resto da divisão</p>
+    <p id="pot"> Potencia </p>
+    <button onclick="aumenta()"> + </button>
+    <button onclick="diminui()"> - </button>
+    <button onclick="limpa()"> Limpar </button>
+</body>
+<footer>
+    <script>
+        var x=0;
+        var y=5;
+        function atualiza(){
+            document.getElementById("som").innerHTML="A Soma de "+x+" e "+y+" é "+x+y;
+            document.getElementById("sub").innerHTML="A Subtração de "+x+" e "+y+" é "+x-y;
+            document.getElementById("mult").innerHTML="A Multiplicação de "+x+" e "+y+" é "+x*y;
+            document.getElementById("div").innerHTML="A Divisão de "+x+" e "+y+" é "+x/y;
+            document.getElementById("res").innerHTML="O Resto da divisão de "+x+" e "+y+" é "+x%y;
+            document.getElementById("pot").innerHTML="A Potencia de "+x+" e "+y+" é "+x**y;
+        }
+        function aumenta(){x++;atualiza()}
+        function diminui(){x--;atualiza()}
+        function Limpa(){x--;atualiza()}
+    </script>
+</footer>
+</html>

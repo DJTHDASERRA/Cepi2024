@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+</head>
+<body>
+    <h1>Tela de Login</h1>
+    <div>
+        <input type="text" id="user" placeholder="Digite seu usuário">
+        <input type="password" id="senha" placeholder="Digite sua senha">
+        <br>
+        <button onclick="entrar()">Entrar</button>
+        <hr>
+        <div id="tela"></div>
+    </div>
+</body>
+<footer>
+    <script>
+        let user="ANA LUCIA", senha="Ana123";
+        function entrar(){
+            let senha1="", user1="";
+            senha1=document.getElementById("senha").value;
+            user1=document.getElementById("user").value;
+
+            if(senha1!=senha){
+                document.getElementById("tela").innerHTML+="Senha incorreta, Tente novamente! <br>";
+            }
+            if(user1!=user1){
+                document.getElementById("tela").innerHTML+="Usuário incorreto, Tente novamente! <br>";
+            }
+            if(user1==user&&senha1==senha){
+                document.getElementById("tela").innerHTML+="Login efetuado com sucesso, Seja Bem vindo(a) <br>";
+            }
+        }
+    </script>
+</footer>
+</html>

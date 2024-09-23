@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jogo do código escondido</title>
+</head>
+<body>
+    <!--
+    Levante requesitos
+     -- jogo do numero escondido --
+    Nesse jogo o usuário deve escolher o valor máximo para o computador sortear.
+    O jogo deve ter uma tela para que o usuário dê o seu palpite e retornar se o usuário acertou ou não.
+    Telas:
+
+        -_Inicial_-
+        Deve ter campo onde o usuário vai digitar o proximo nome;
+        Deve ter campo onde o usuário vai digitar o proximo valor máximo;
+        deve ter o botão que iniciará o jogo;
+
+        -_Tela do Jogo_-
+        Deve ter campo pode o usuário colocar o palpite;
+        Um botão para checar se o palpite está certo;
+        um texto contendo a quantidade de tentativas o valor máximo e o valor mínimo;
+
+    O jogo deve checar:
+        Se o palpite for menor que o numero escondido, o mínimo recebe o valor palpite;
+        Se o palpite for maior que o numero escondido, o máximo recebe o valor palpite;
+        Se o palpite for igual que o numero escondido, o jogo mostra:
+            Parabéns Você achou o número com X tentativas e com acerto de X%;
+        Se o valor digitado form maior que o máximo ou menor que o mínimo:
+            Faça aparecer uma zueira na tela;
+        Variáveis:
+            nome = Para guardar o nome do usuário;
+            valor = Para guardar o vamor Máximo a ser sorteado;
+            palpite = Para guardar o palpite do usuário;
+            num = Para guardar Mat.floor (Math.random()*valor);
+            max = Inicialmente o valor e depois o válor máximo disponível;
+            min = O valor mínimo disponíveil;
+            tentativa = Para guardar a quantidade de tentativas;
+    -->
+    <div id="jogo">
+        <h1>Tigrinho 2.0</h1>
+        <h5>Encontre o numero escondido</h5>
+        <h5>Valor min da aposta R$1,00</h5>
+        <h5>Boa Sorte!</h5>
+        <div id="Inicio">
+            <input type="text" id="nome" placeholder="Digite seu nome">
+            <br><!--Campo para digitar e guardar o nome do usuário-->
+            <label for="">Digite um Número maior que 0</label>
+            <input type="text" id="valor" min="1">
+            <br><!--Campo para digitar o numero máximo a ser sorteado-->
+            <button onclick="Apostar()">Apostar</button>
+            <!--Campo para chamar a função apostar-->
+        </div>
+        <div id="Tela">
+        </div>
+    </div>
+</body>
+<footer>
+    <script>
+        let nome="", valor=0, tentativas=0, max=0, num=0, palpite=0;
+        function Apostar(){
+        valor=document.getElementById("valor").value;
+        num=Math.floor(Math.random()*valor);
+        alert(num);
+        alert(nome);
+        document.getElementById("Inicio").innerHTML="";
+    } 
+    </script>
+</footer>
+</html>
